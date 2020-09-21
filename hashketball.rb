@@ -125,15 +125,16 @@ def game_hash
   }
 end
 
-player stats 
-team stats 
-points scored
-shoe 
-team colors 
-team names 
-player numbers
-player stats
+num_points_scored
+player_stats 
+team_stats 
+points_scored
+shoe_size
+team_colors 
+team_names 
+player_numbers
+#player stats
 
-bonus-
+#bonus-
 biggest shoe
 big shoe rebounds
