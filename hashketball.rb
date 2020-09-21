@@ -126,7 +126,7 @@ def game_hash
 end
 
 def the_players_stats(player_name)
-  hash = game_hash();
+  hash = game_hash()
   hash.each do |key, team_stats|
     team_stats[:players].map do |k, v|
       if k[:player_name] == player_name 
@@ -159,7 +159,12 @@ def team_colors(team_name)
 end
 
 def team_names()
+  hash = game_hash()
+  hash.collect do |key, team_stats|
+    team_stats[:team_name]
+  end
 end
+
 
 def player_numbers()
 end
