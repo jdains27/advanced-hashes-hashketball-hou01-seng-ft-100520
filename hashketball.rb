@@ -167,3 +167,36 @@ def player_stats(player_name)
   end
 end
 
+def get_biggest_shoe()
+  hash = game_hash();
+  players_shoe_sizes = {}
+
+  hash.each do
+    |_, teams|
+    teams[:players].each{
+      |players|
+      players_shoe_sizes[players[:player_name]]= players[:shoe]
+    }
+  end
+  shoe_sizes = players_shoe_sizes.collect{
+    |key, value|
+    value
+  }
+
+  biggest_shoe_size = shoe_sizes.sort[-1]
+
+  players_shoe_sizes.each{
+    |key, value|
+
+    if value == biggest_shoe_size then
+      return key
+    end
+  }
+end
+
+def big_shoe_rebounds()
+  biggest_shoe_player = get_biggest_shoe(); #player_name
+
+  return get_player_stats(biggest_shoe_player)[:rebounds]
+
+end
