@@ -146,7 +146,16 @@ def player_numbers
 def points_scored
 def shoe_size
 
-def team_stats
+def team_stats(team_name)
+  hash = game_hash()
+  hash.each do
+    |key, team_stats|
+    if team_stats[:team_name] == team_name then
+      return team_stats;
+    end
+  end
+end
+
 def team_colors 
 def team_names 
   
