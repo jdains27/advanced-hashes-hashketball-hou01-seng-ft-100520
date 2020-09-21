@@ -128,4 +128,7 @@ end
 player stats 
 team stats 
 points scored
-shoe size
+shoe 
+team colors 
+team names 
+
