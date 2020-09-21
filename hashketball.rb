@@ -127,4 +127,5 @@ end
 
 player stats 
 team stats 
-
+points scored
+shoe size
