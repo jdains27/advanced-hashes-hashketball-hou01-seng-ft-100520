@@ -126,7 +126,9 @@ def game_hash
 end
 
 def num_points_scored
-player_stats 
+end 
+def player_stats
+  
 player_numbers
 points_scored
 shoe_size
