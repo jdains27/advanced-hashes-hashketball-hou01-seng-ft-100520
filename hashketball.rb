@@ -154,7 +154,8 @@ def get_team_stats(team_name)
   end
 end
 
-def team_colors()
+def team_colors(team_name)
+  get_team_stats(team_name)[:colors]
 end
 
 def team_names()
