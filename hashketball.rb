@@ -147,8 +147,8 @@ end
 def the_team_stats(team_name)
   hash = game_hash()
   hash.each do |key, team_stats|
-    if team_stats[:team_name] == team_name then
-      return team_stats
+    if team_stats[:team_name] == team_name 
+      then return team_stats
     end
   end
 end
