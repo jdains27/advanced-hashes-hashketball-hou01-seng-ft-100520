@@ -170,7 +170,7 @@ def player_numbers(team)
   end
 end
 
-def the_player_stats(player_name)
+def player_stats(player_name)
   the_player_stats(player_name)
 end
 
