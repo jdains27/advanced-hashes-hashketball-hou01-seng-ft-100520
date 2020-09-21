@@ -180,7 +180,7 @@ def player_numbers(team)
 end
 
 def player_stats(player_name)
-  player_stats(player_name)
+  player_stat(player_name)
 end
 
 def biggest_shoe()
