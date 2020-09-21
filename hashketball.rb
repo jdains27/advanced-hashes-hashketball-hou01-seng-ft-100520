@@ -143,14 +143,14 @@ def player_stats(player_name)
   end
 end
 def player_numbers
-points_scored
-shoe_size
+def points_scored
+def shoe_size
 
-team_stats
-team_colors 
-team_names 
+def team_stats
+def team_colors 
+def team_names 
+  
 #player stats
-
 #bonus-
-biggest shoe
-big shoe rebounds
+def biggest shoe
+def big shoe rebounds
