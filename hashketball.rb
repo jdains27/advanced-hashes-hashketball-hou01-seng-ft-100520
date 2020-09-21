@@ -142,8 +142,18 @@ def player_stats(player_name)
     end
   end
 end
-def player_numbers
+
+def player_numbers(team)
+  get_team_stats(team)[:players].collect do
+    |key, value|
+
+    key[:number]
+
+  end
+end
+
 def points_scored
+
 def shoe_size(player_name)
   get_player_stats(player_name)[:shoe]
 end
@@ -173,5 +183,5 @@ end
   
 #player stats
 #bonus-
-def biggest shoe
-def big shoe rebounds
+#def biggest shoe
+#def big shoe rebounds
