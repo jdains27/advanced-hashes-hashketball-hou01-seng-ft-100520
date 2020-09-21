@@ -191,7 +191,7 @@ end
 
 
 
-def get_biggest_shoe()
+def get_biggest_shoe();;
   hash = game_hash();
   players_shoe_sizes = {}
 
