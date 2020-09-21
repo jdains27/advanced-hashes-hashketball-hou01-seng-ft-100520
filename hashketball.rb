@@ -125,7 +125,7 @@ def game_hash
   }
 end
 
-num_points_scored
+def num_points_scored
 player_stats 
 player_numbers
 points_scored
