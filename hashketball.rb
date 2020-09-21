@@ -190,8 +190,6 @@ def biggest_shoe()
 end
 
 def big_shoe_rebounds()
-  biggest_shoe_player = get_biggest_shoe(); #player_name
-
-  return get_player_stats(biggest_shoe_player)[:rebounds]
-
+  biggest_shoe_player = biggest_shoe()
+  return the_player_stats(biggest_shoe_player)[:rebounds]
 end
