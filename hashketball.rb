@@ -125,7 +125,7 @@ def game_hash
   }
 end
 
-def get_player_stats(player_name)
+def the_player_stats(player_name)
   hash= game_hash()
   hash.each do
     |key, team_stats|
@@ -139,7 +139,7 @@ def get_player_stats(player_name)
   end
 end
 
-def get_team_stats(team_name)
+def the_team_stats(team_name)
   hash = game_hash()
   hash.each do
     |key, team_stats|
@@ -150,15 +150,15 @@ def get_team_stats(team_name)
 end
 
 def num_points_scored(player_name)
-  get_player_stats(player_name)[:points]
+  the_player_stats(player_name)[:points]
 end
 
 def shoe_size(player_name)
-  get_player_stats(player_name)[:shoe]
+  the_player_stats(player_name)[:shoe]
 end
 
 def team_colors(team_name)
-  get_team_stats(team_name)[:colors]
+  the_team_stats(team_name)[:colors]
 end
 
 def team_names()
@@ -171,7 +171,7 @@ def team_names()
 end
 
 def player_numbers(team)
-  get_team_stats(team)[:players].collect do
+  the_team_stats(team)[:players].collect do
     |key, value|
 
     key[:number]
@@ -180,10 +180,10 @@ def player_numbers(team)
 end
 
 def player_stats(player_name)
-  get_player_stats(player_name)
+  the_player_stats(player_name)
 end
 
-def get_biggest_shoe()
+def the_biggest_shoe()
   hash = game_hash()
   players_shoe_sizes = {}
 
@@ -211,8 +211,8 @@ def get_biggest_shoe()
 end
 
 def big_shoe_rebounds()
-  biggest_shoe_player = get_biggest_shoe() #player_name
+  biggest_shoe_player = the_biggest_shoe() #player_name
 
-  return get_player_stats(biggest_shoe_player)[:rebounds]
+  return the_player_stats(biggest_shoe_player)[:rebounds]
 
 end
