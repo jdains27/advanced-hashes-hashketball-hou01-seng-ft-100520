@@ -132,4 +132,4 @@ shoe
 team colors 
 team names 
 player numbers
-
+player stats
