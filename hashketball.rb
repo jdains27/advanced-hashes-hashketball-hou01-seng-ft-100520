@@ -171,7 +171,7 @@ def player_numbers(team)
 end
 
 def the_player_stats(player_name)
-  player_stats(player_name)
+  the_player_stats(player_name)
 end
 
 def biggest_shoe()
