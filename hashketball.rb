@@ -140,10 +140,10 @@ end
 def player_stats()
 end
 
-def
+def biggest_shoe_size
 end
 
-def
+def big_shoe_rebounds
 end
 
 def
