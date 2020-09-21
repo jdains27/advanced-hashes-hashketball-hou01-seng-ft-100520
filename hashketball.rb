@@ -181,7 +181,7 @@ def team_names()
   end
 end
   
-#player stats
+def player stats
 #bonus-
 #def biggest shoe
 #def big shoe rebounds
