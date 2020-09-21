@@ -164,4 +164,34 @@ def team_names()
   end
 end
 
+def player_numbers(team)
+  the_team_stats(team)[:players].collect do |key, value|
+    key[:number]
+  end
+end
 
+def player_stats(player_name)
+  the_player_stats(player_name)
+end
+
+def biggest_shoe()
+  hash = game_hash()
+  players_shoe_sizes = {}
+  hash.each do |_, teams|
+    teams[:players].each{ |players|players_shoe_sizes[players[:player_name]]= players[:shoe]}
+  end
+  shoe_sizes = players_shoe_sizes.collect{ |key, value| value }
+  biggest_shoe_size = shoe_sizes.sort[-1]
+  players_shoe_sizes.each{ |key, value| 
+    if value == biggest_shoe_size 
+      then return key
+    end
+  }
+end
+
+def big_shoe_rebounds()
+  biggest_shoe_player = get_biggest_shoe(); #player_name
+
+  return get_player_stats(biggest_shoe_player)[:rebounds]
+
+end
