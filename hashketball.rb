@@ -127,12 +127,9 @@ end
 
 def the_player_stats(player_name)
   hash= game_hash()
-  hash.each do
-    |key, team_stats|
-
-    team_stats[:players].each do
-      |k, v|
-      if k[:player_name] == player_name then
+  hash.each do |key, team_stats|team_stats[:players].each do |k, v|
+  if k[:player_name] == player_name 
+    then
         return k
       end
     end
@@ -141,10 +138,8 @@ end
 
 def the_team_stats(team_name)
   hash = game_hash()
-  hash.each do
-    |key, team_stats|
-    if team_stats[:team_name] == team_name then
-      return team_stats
+  hash.each do |key, team_stats| if team_stats[:team_name] == team_name 
+  then return team_stats
     end
   end
 end
@@ -163,19 +158,12 @@ end
 
 def team_names()
   hash = game_hash()
-
-  hash.collect do
-    |key, team_stats|
-    team_stats[:team_name]
+  hash.collect do |key, team_stats|team_stats[:team_name]
   end
 end
 
 def player_numbers(team)
-  the_team_stats(team)[:players].collect do
-    |key, value|
-
-    key[:number]
-
+  the_team_stats(team)[:players].collect do |key, value| key[:number]
   end
 end
 
@@ -186,33 +174,17 @@ end
 def the_biggest_shoe()
   hash = game_hash()
   players_shoe_sizes = {}
-
-  hash.each do
-    |_, teams|
-    teams[:players].each{
-      |players|
-      players_shoe_sizes[players[:player_name]]= players[:shoe]
-    }
+  hash.each do |_, teams|teams[:players].each{ |players|
+      players_shoe_sizes[players[:player_name]]= players[:shoe] }
   end
-  shoe_sizes = players_shoe_sizes.collect{
-    |key, value|
-    value
-  }
-
+  shoe_sizes = players_shoe_sizes.collect{ |key, value| value }
   biggest_shoe_size = shoe_sizes.sort[-1]
-
-  players_shoe_sizes.each{
-    |key, value|
-
-    if value == biggest_shoe_size then
-      return key
-    end
-  }
+  players_shoe_sizes.each{ |key, value| if value == biggest_shoe_size then 
+  return key 
+  end }
 end
 
 def big_shoe_rebounds()
-  biggest_shoe_player = the_biggest_shoe() #player_name
-
+  biggest_shoe_player = the_biggest_shoe()
   return the_player_stats(biggest_shoe_player)[:rebounds]
-
 end
