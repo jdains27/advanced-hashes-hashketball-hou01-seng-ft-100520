@@ -131,7 +131,7 @@ end
 def team_colors()
 end
 
-def
+def team_names()
 end
 
 def
