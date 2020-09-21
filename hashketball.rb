@@ -128,7 +128,7 @@ end
 def shoe_size()
 end 
 
-def
+def team_colors()
 end
 
 def
