@@ -162,7 +162,14 @@ def team_colors(team_name)
   get_team_stats(team_name)[:colors]
 end
 
-def team_names 
+def team_names()
+  hash = game_hash();
+
+  hash.collect do
+    |key, team_stats|
+    team_stats[:team_name]
+  end
+end
   
 #player stats
 #bonus-
