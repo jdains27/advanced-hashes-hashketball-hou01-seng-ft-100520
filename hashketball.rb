@@ -165,20 +165,3 @@ def team_names()
 end
 
 
-def player_numbers()
-end
-
-def player_stats()
-end
-
-def biggest_shoe_size()
-end
-
-def big_shoe_rebounds()
-end
-
-def most_points_scored()
-end
-
-def winning_team()
-end
