@@ -127,12 +127,13 @@ end
 
 num_points_scored
 player_stats 
-team_stats 
+player_numbers
 points_scored
 shoe_size
+
+team_stats
 team_colors 
 team_names 
-player_numbers
 #player stats
 
 #bonus-
