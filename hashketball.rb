@@ -126,8 +126,32 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  get_player_stats(player_name)[:points]
+  player_stats(player_name)[:points]
 end 
+
+def shoe_size(player_name)
+  player_stats(player_name)[:shoe]
+end
+
+def team_colors(team_name)
+  team_stats(team_name)[:colors]
+end
+
+def team_names()
+  hash = game_hash();
+
+  hash.collect do
+    |key, team_stats|
+    team_stats[:team_name]
+  end
+end
+
+def player_numbers(team)
+  team_stats(team)[:players].collect do
+    |key, value|
+    key[:number]
+  end
+end
 
 def player_stats(player_name)
   hash= game_hash();
@@ -142,50 +166,6 @@ def player_stats(player_name)
     end
   end
 end
-
-def player_numbers(team)
-  get_team_stats(team)[:players].collect do
-    |key, value|
-
-    key[:number]
-
-  end
-end
-
-#def points_scored
-
-def shoe_size(player_name)
-  get_player_stats(player_name)[:shoe]
-end
-
-def team_stats(team_name)
-  hash = game_hash()
-  hash.each do
-    |key, team_stats|
-    if team_stats[:team_name] == team_name then
-      return team_stats;
-    end
-  end
-end
-
-def team_colors(team_name)
-  get_team_stats(team_name)[:colors]
-end
-
-def team_names()
-  hash = game_hash();
-
-  hash.collect do
-    |key, team_stats|
-    team_stats[:team_name]
-  end
-end
   
-#def player stats(player_name)
- # get_player_stats(player_name)
-#end
-
-
-#bonus-
-#def biggest shoe
-#def big shoe rebounds
+def big_shoe_rebounds
+end
