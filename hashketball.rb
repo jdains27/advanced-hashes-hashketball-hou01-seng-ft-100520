@@ -125,5 +125,8 @@ def game_hash
   }
 end
 
-def 
+def shoe_size()
 end 
+
+def
+end
