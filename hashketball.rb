@@ -179,9 +179,9 @@ def player_numbers(team)
   end
 end
 
-#def player_stats(player_name)
-#  get_player_stats(player_name)
-#end
+def player_stats(player_name)
+  get_player_stats(player_name)
+end
 
 def get_biggest_shoe()
   hash = game_hash();
