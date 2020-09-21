@@ -125,6 +125,10 @@ def game_hash
   }
 end
 
+def num_points_scored
+  game_hash
+end 
+
 def shoe_size()
 end 
 
@@ -149,5 +153,5 @@ end
 def most_points_scored()
 end
 
-def
+def winning_team()
 end
