@@ -181,9 +181,9 @@ def team_names()
   end
 end
   
-def player stats(player_name)
-  get_player_stats(player_name)
-end
+#def player stats(player_name)
+ # get_player_stats(player_name)
+#end
 
 
 #bonus-
