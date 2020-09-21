@@ -144,7 +144,9 @@ def player_stats(player_name)
 end
 def player_numbers
 def points_scored
-def shoe_size
+def shoe_size(player_name)
+  get_player_stats(player_name)[:shoe]
+end
 
 def team_stats(team_name)
   hash = game_hash()
