@@ -125,8 +125,10 @@ def game_hash
   }
 end
 
-def num_points_scored
+def num_points_scored(player_name)
+  get_player_stats(player_name)[:points]
 end 
+
 def player_stats(player_name)
   hash= game_hash();
   hash.each do
@@ -140,7 +142,7 @@ def player_stats(player_name)
     end
   end
 end
-player_numbers
+def player_numbers
 points_scored
 shoe_size
 
