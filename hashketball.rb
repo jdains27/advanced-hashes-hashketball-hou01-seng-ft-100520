@@ -140,7 +140,7 @@ def num_points_scored(player_name)
   the_player_stats(player_name)[:points]
 end 
 
-def shoe_size()
+def shoe_size(player_name)
 end 
 
 def team_colors()
